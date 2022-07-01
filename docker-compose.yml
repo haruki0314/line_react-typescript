@@ -11,16 +11,32 @@
 #     ports:
 #       - "3001:3001"
 #     stdin_open: true
-version: "3"
+
+# version: "3"
+# services:
+#   node:
+#     build:
+#       context: .
+#     tty: true
+#     environment:
+#       - CHOKIDAR_USEPOLLING=true
+#     volumes:
+#       - ./:/usr/src/app
+#     command: sh -c "cd app && yarn start"
+#     ports:
+#       - "3000:3000"
+
+version: "3.8"
 services:
-  node:
-    build:
-      context: .
-    tty: true
-    environment:
-      - CHOKIDAR_USEPOLLING=true
+  front:
+    build: ./
+    container_name: node
     volumes:
-      - ./:/usr/src/app
-    command: sh -c "cd app && yarn start"
+      - ./front:/front
+    working_dir: /front
     ports:
-      - "3000:3000"
+      - 3000:3000
+    tty: true
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true //ホットリロードを行う設定
