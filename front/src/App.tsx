@@ -1,7 +1,9 @@
 import React from "react";
+import { FC } from "react";
 import SingIn from "./components/SingIn";
+import firebase from "firebase/compat/app";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "/Users/obaharuki/development/line_react-typescript/front/src/firebase";
+import { auth } from "./firebase";
 
 import "./App.css";
 import Line from "./components/pages/Line";
