@@ -9,9 +9,14 @@ import "./App.css";
 import Line from "./components/pages/Line";
 
 function App() {
-  const user = useAuthState(auth);
+  // const user = useAuthState(auth);
 
-  return <div className="App">{user ? <Line /> : <SingIn />}</div>;
+  // return <div className="App">{user ? <Line /> : <SingIn />}</div>;
+  return (
+    <div>
+      <SingIn />
+    </div>
+  );
 }
 
 export default App;
