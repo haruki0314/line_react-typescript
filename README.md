@@ -1,8 +1,8 @@
-メモっす、特に read me するもの入ってないっすよ
+メモです。
+
 line の clone 作ってます。
-firebase のログイン機能使ってるんで、google ログイン実装してみました！！
-以上
-docker 使ってるんで、コンテナからアクセスしてね
+firebase のログイン機能使ってるんで、google ログイン実装してみました。
+docker 使ってます。
 
 https://logical-studio.com/develop/development/docker/20211217-docker-react-formatter/#docker-composeyml
 
