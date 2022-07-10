@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import SingOut from "../SingOut";
 
 function Line() {
   return (
-    <div>Lineです。</div>
-  )
+    <div>
+      Lineです。
+      <SingOut />
+    </div>
+  );
 }
 
-export default Line
+export default Line;
