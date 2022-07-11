@@ -15,23 +15,28 @@ function SingIn() {
     alert("アラート");
   };
   function singWithGoogle() {
+    // function singWithGoogle(this: any) {
+    // const { user } = this.state;
     alert("login");
     const provider = new firebase.auth.GoogleAuthProvider();
     //errorだった場合、画面遷移を行いたくない。
     auth
       .signInWithPopup(provider)
-      .then((success) => loginSuccessFunc(success))
-      .catch((err) => loginErrorFunc(err));
+      .then((success) => loginSuccessFunc(success, user))
+      .catch((err) => loginErrorFunc(err, user));
   }
-  const loginSuccessFunc = (success: any): void => {
+  const loginSuccessFunc = (success: any, user: boolean): void => {
     alert("success" + success);
     // setUser(true);
     user = true;
   };
-  const loginErrorFunc = (err: string): void => {
+  const loginErrorFunc = (err: string, user: boolean): void => {
     alert("error" + err);
     // setUser(false);
     user = false;
+    // this.setState{
+
+    // }
   };
   return (
     <div>
